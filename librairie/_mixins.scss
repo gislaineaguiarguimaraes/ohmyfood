@@ -1,0 +1,117 @@
+@mixin global {
+    max-width: 768px;
+    margin: auto;
+    
+    h1 {
+        font-size: 22px;
+        font-weight: bolder;      
+    } 
+    
+    h2 {
+        font-size: 20px;
+        font-weight: bolder;      
+    } 
+
+    h3 {
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    p {
+        font-size: 16px;  
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@mixin gradientBtn {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    background: linear-gradient( $secondaire, $primaire);
+    border-radius: 50px;
+    border: none;
+}
+
+@mixin headerBtn {
+    position: absolute;
+    left: 0;
+    border: none;
+    background-color: white;
+
+    i {
+        font-size: 24px;
+        padding-left: 15px;
+    }
+}
+
+@mixin cardResto {
+    border-radius: 20px;
+    background-color: white;
+    width: 95%;
+    height: 250px;
+    margin:auto;
+    margin-bottom: 20px;
+    box-shadow: $shadow;
+}
+
+@mixin cardRestoImg {
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+@mixin cardNouveau {
+    width: 80px;
+    padding: 9px;
+    background-color: $tertiaire;
+    color: #08704f;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 4px;
+    
+}
+
+@mixin cardMenu {
+    width: 94%;
+    height: 60px;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    line-height: 1.4;
+
+    .principalMenu-info {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@mixin footer {
+    color: white;
+    background-color: $grisFooter;
+    padding: 30px;
+    
+    img {
+        padding-bottom: 10px;
+        width: 130px;
+    }
+    
+    li {
+        padding: 5px;
+
+        i {
+            width: 15px;
+            padding-right: 13px;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@import "librairie/reset";
+
+@import "librairie/variables";
+
+@import "librairie/mixin";
+
+body {
+    background-color: silver;
+    font-family: $main-font;
+}
+
+#contentBlock {
+    @include global
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+
+    .logo {
+            width: 200px;  
+            padding: 15px;      
+    }   
+}
+
+.localization {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    background-color: rgb(220, 220, 220);
+    box-shadow:inset 0px 3px 5px rgba(0, 0, 0, 0.215);
+
+    i {
+        padding-right: 10px;
+    }
+}
+
+/*Partie présentation*/
+
+.introduction {
+    max-width: 100%;
+    background-color: $gris;
+    text-align: center;
+    padding: 30px;
+    h1, p {
+        padding: 10px;
+    }
+}
+
+.btn {
+    @include gradientBtn;
+    box-shadow: $shadow;
+}
+
+/*Partie information sur l'APP*/
+
+.info {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 30px;
+
+    h2 {
+        padding: 15px;
+    }
+
+    &Articles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+
+    }
+
+    &Steps{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: $gris;
+        padding: 25px;
+        gap: 20px;
+        width: 75%;
+        border-radius: 25px;
+        box-shadow: $shadow;
+
+        &--purple {
+            background-color:#9256dc2a ;
+        }
+    }
+}
+
+.infoSteps-num {
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    margin-left: -7px;
+    color:white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: $primaire
+}
+
+.infoSteps-icon {
+    color: gray;
+    padding-left: 20px;
+
+    &--purple {
+        color: $primaire;
+    }
+}
+
+.infoSteps-text {
+    text-align: center;
+}
+
+/*Partie restaurants*/
+
+.div-restaurant {
+    margin-right: 0;
+    padding-bottom: 50px;
+    background-color: $gris;
+    h2 {
+        padding-top: 40px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+       
+    }
+}
+.card-resto {
+    position: relative;
+    @include cardResto;
+}
+
+.card-resto-img { 
+    @include cardRestoImg
+}
+
+.cardNew {
+    margin: 10px;
+    position: absolute;
+    top:0;
+    right: 0;
+    @include cardNouveau
+}
+
+.card-resto-info {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.4;
+    i {
+        font-size: 26px;
+    }
+    
+}
+ /*Partie Footer*/
+
+footer {
+    @include footer;
+    
+}
