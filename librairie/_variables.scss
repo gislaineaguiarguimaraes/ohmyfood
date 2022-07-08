@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
-
 $main-font: 'Roboto', sans-serif;
 $title-font: 'Shrikhand', cursive;
-$primaire: #9356DC;
-$secondaire: #FF79DA;
-$tertiaire: #99E2D0;
-$gris: #E6E6E6;
-$grisFooter:#2e2e2e;
-$shadow: 3px 3px 5px rgba(0, 0, 0, 0.26);
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$light: white;
+$lightGrey:#f0f0f0;
+$greyBody: #E6E6E6;
+$greyIcon: grey;
+$darkGrey: #2e2e2e;
+$dark: black;
+$green: #08704f;
+$btnPurple: #9256dc2a;
+
+$shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
+$shadowInset: inset 0px 1px 3px rgba(0, 0, 0, 0.26);
