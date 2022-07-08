@@ -62,10 +62,6 @@ body {
   font-size: 22px;
   font-weight: bolder;
 }
-#contentBlock h2 {
-  font-size: 20px;
-  font-weight: bolder;
-}
 #contentBlock h3 {
   font-size: 16px;
   font-weight: bolder;
@@ -73,8 +69,13 @@ body {
 #contentBlock p {
   font-size: 16px;
 }
+#contentBlock p.price {
+  font-weight: bold;
+}
 #contentBlock h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: normal;
 }
 
 header {
@@ -93,13 +94,14 @@ header button {
   left: 0;
   border: none;
   background-color: white;
+  color: black;
 }
 header button i {
   font-size: 24px;
   padding-left: 15px;
 }
 header .logo {
-  width: 200px;
+  width: 150px;
   padding: 15px;
 }
 
@@ -110,17 +112,14 @@ header .logo {
   background-size: cover;
 }
 
-.principalInfo {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  border-radius: 40px 40px 0 0;
-  margin-top: -35px;
-  padding: 30px;
-}
-
 .principal {
   background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal section {
+  width: 100%;
 }
 .principalMenu {
   display: flex;
@@ -141,6 +140,22 @@ header .logo {
 }
 .principal h2 {
   padding: 12px;
+  font-size: 18px;
+}
+
+.principalInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 40px 40px 0 0;
+  margin-top: -35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.principalInfo h1, .principalInfo i {
+  font-size: 26px;
+  padding: 20px;
 }
 
 .divBtn {

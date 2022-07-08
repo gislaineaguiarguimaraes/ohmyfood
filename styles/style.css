@@ -63,16 +63,15 @@ body {
   font-size: 22px;
   font-weight: bolder;
 }
-#contentBlock h2 {
-  font-size: 20px;
-  font-weight: bolder;
-}
 #contentBlock h3 {
   font-size: 16px;
   font-weight: bolder;
 }
 #contentBlock p {
   font-size: 16px;
+}
+#contentBlock p.price {
+  font-weight: bold;
 }
 
 header {
@@ -135,6 +134,8 @@ header .logo {
 }
 .info h2 {
   padding: 15px;
+  font-size: 18px;
+  font-weight: bolder;
 }
 .infoArticles {
   display: flex;
@@ -199,6 +200,8 @@ header .logo {
   padding-top: 40px;
   padding-left: 15px;
   padding-bottom: 15px;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .card-resto {

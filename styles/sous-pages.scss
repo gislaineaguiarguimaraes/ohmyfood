@@ -14,6 +14,8 @@ body {
 
     h1{
         font-family: $title-font;
+        font-size: 28px;
+        font-weight: normal;
     }
 }
 
@@ -30,43 +32,56 @@ header {
     }
     button {
         @include headerBtn;
+        color: $dark;
     }
 
     .logo {
-            width: 200px;  
+            width: 150px;  
             padding: 15px;      
     }   
 }
 
 .backgroundImg {
-    width: 100%;
-    height: 250px;
-    background: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center center;
-    background-size: cover;
-}
-
-.principalInfo {
-    display: flex;
-    justify-content: space-between;
-    background-color: $lightGrey;
-    border-radius: 40px 40px 0 0;
-    margin-top: -35px;
-    padding: 30px;
+    @include backgroundImg;
+    $image: url("../")
 }
 
 .principal {
     background-color: $lightGrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section {
+        width: 100%;
+    }
 
     &Menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @include cardMenu;
-        
+        @include cardMenu;   
     }
 
     h2 {
         padding: 12px;
+        font-size: 18px;
+    }
+}
+
+.principalInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color:$lightGrey;
+    border-radius: 40px 40px 0 0;
+    margin-top: -35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    h1, i {
+        font-size: 26px;
+        padding: 20px;
     }
 }
 
@@ -78,7 +93,7 @@ header {
 .btn {
     @include gradientBtn;
     box-shadow: $shadow;
-    margin: 15px
+    margin: 15px;
 }
 
 footer {
