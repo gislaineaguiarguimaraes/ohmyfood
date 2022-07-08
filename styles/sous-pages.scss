@@ -7,16 +7,23 @@
 body {
     background-color: $greyBody;
     font-family: $main-font; 
+
+    h3 {
+        @include fontStyle (16px, bolder);
+    }
+
+    p {
+        @include fontStyle (16px, normal);  
+        
+        &.price {
+            font-weight: bold;
+        }
+
+    } 
 }
 
 #contentBlock {
     @include global;
-
-    h1{
-        font-family: $title-font;
-        font-size: 28px;
-        font-weight: normal;
-    }
 }
 
 header {
@@ -30,7 +37,7 @@ header {
         position: relative;
         padding: 15px;
     }
-    button {
+    a {
         @include headerBtn;
         color: $dark;
     }
@@ -43,7 +50,7 @@ header {
 
 .backgroundImg {
     @include backgroundImg;
-    $image: url("../")
+    
 }
 
 .principal {
@@ -65,13 +72,14 @@ header {
 
     h2 {
         padding: 12px;
-        font-size: 18px;
+        @include fontStyle (18px, normal)
     }
 }
 
 .principalInfo {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color:$lightGrey;
     border-radius: 40px 40px 0 0;
@@ -79,9 +87,15 @@ header {
     padding-top: 15px;
     padding-bottom: 15px;
     
-    h1, i {
-        font-size: 26px;
+    h1 {
+        font-family: $title-font;
+        @include fontStyle (24px, normal);
         padding: 20px;
+    }
+
+    i {
+        font-size: 22px;
+        padding-right: 15px;
     }
 }
 
@@ -92,7 +106,6 @@ header {
 
 .btn {
     @include gradientBtn;
-    box-shadow: $shadow;
     margin: 15px;
 }
 
