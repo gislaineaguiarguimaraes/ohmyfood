@@ -2,6 +2,13 @@
     max-width: 768px;
     margin: auto;
 }
+
+@mixin flexBox ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
     
 @mixin fontStyle ($size, $weight) {
     font-size: $size;
@@ -108,7 +115,7 @@
 @mixin footer {
     color: $light;
     background-color: $darkGrey;
-    padding: 30px;
+    padding: 25px;
     
     img {
         padding-bottom: 10px;

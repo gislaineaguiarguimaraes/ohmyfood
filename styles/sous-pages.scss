@@ -13,7 +13,7 @@ body {
     }
 
     p {
-        @include fontStyle (16px, normal);  
+        @include fontStyle (15px, normal);  
         
         &.price {
             font-weight: bold;
@@ -31,9 +31,7 @@ header {
     background-color: $light;
 
     .divHeader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexBox (row, center, center);
         position: relative;
         padding: 15px;
     }
@@ -54,19 +52,14 @@ header {
 }
 
 .principal {
+    @include flexBox (column, center, center);
     background-color: $lightGrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     section {
         width: 100%;
     }
 
     &Menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flexBox (column, center, star);
         @include cardMenu;   
     }
 
@@ -77,9 +70,7 @@ header {
 }
 
 .principalInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexBox (row, space-between, center);
     width: 100%;
     background-color:$lightGrey;
     border-radius: 40px 40px 0 0;

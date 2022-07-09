@@ -22,8 +22,7 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: center;
+    @include flexBox (row, center, center);
     width: 100%;
     background-color: $light;
 
@@ -48,14 +47,13 @@ header {
 /*Partie présentation*/
 
 .introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexBox (column, center, center);
     max-width: 100%;
     background-color: $lightGrey;
     text-align: center;
     padding: 30px;
-    h1, p {
+    h1 {
+        @include fontStyle (28px, bolder);
         padding: 10px;
     }
 }
@@ -72,15 +70,13 @@ header {
     padding-bottom: 30px;
 
     h2 {
-        @include fontStyle (18px, bolder);
-        padding: 15px;
+        @include fontStyle (20px, bolder);
+        padding-top: 25px;
+        margin-left: 35px;
     }
 
     &Articles {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flexBox (column, center, center);
         width: 100%;
         gap: 20px;
         padding-top: 20px;
@@ -141,10 +137,10 @@ header {
     padding-bottom: 50px;
     background-color: $lightGrey;
     h2 {
-        @include fontStyle (18px, bolder);
+        @include fontStyle (20px, bolder);
         padding-top: 40px;
-        padding-left: 15px;
-        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-bottom: 20px;
         
        
     }
@@ -167,10 +163,8 @@ header {
 }
 
 .card-resto-info {
+    @include flexBox (row, space-between, center);
     padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     line-height: 1.4;
     i {
         font-size: 24px;
