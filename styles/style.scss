@@ -78,9 +78,6 @@ header {
     &Articles {
         @include flexBox (column, center, center);
         width: 100%;
-        gap: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
         background-color: $light;
 
     }
@@ -90,11 +87,15 @@ header {
         display: flex;
         flex-direction: row;
         background-color: $lightGrey;
-        padding: 25px;
-        gap: 20px;
+        padding: 20px;
+        margin: 10px;
         width: 75%;
         border-radius: 25px;
         box-shadow: $shadow;
+
+        h3 {
+            padding-left: 30px;
+        }
 
         &--purple {
             background-color: $btnPurple ;
@@ -119,7 +120,8 @@ header {
 
 .infoSteps-icon {
     color: $greyIcon;
-    padding-left: 20px;
+    padding: 10px;
+    margin-left: 10px;
 
     &--purple {
         color: $primary;
@@ -128,6 +130,8 @@ header {
 
 .infoSteps-text {
     text-align: center;
+    padding: 10px;
+   
 }
 
 /*Partie restaurants*/
@@ -178,16 +182,17 @@ footer {
     
 }
 
-@media only screen and (max-width:1440px) {
+@media only screen and (min-width:900px) {
     #contentBlock {
         @include global (1440px);
     }
 
     .infoArticles {
         @include flexBox (row, center, center);
-        width: 95%;
+        width: 90%;
         padding-left: 30px;
         padding-right: 30px;
+        margin: 0;
     }
 
     .infoSteps {

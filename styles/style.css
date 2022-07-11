@@ -147,9 +147,6 @@ header .logo {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: white;
 }
 .infoSteps {
@@ -157,11 +154,14 @@ header .logo {
   display: flex;
   flex-direction: row;
   background-color: #f0f0f0;
-  padding: 25px;
-  gap: 20px;
+  padding: 20px;
+  margin: 10px;
   width: 75%;
   border-radius: 25px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
+}
+.infoSteps h3 {
+  padding-left: 30px;
 }
 .infoSteps--purple {
   background-color: rgba(146, 86, 220, 0.1647058824);
@@ -184,7 +184,8 @@ header .logo {
 
 .infoSteps-icon {
   color: grey;
-  padding-left: 20px;
+  padding: 10px;
+  margin-left: 10px;
 }
 .infoSteps-icon--purple {
   color: #9356DC;
@@ -192,6 +193,7 @@ header .logo {
 
 .infoSteps-text {
   text-align: center;
+  padding: 10px;
 }
 
 /*Partie restaurants*/
@@ -276,7 +278,7 @@ footer li i {
   padding-right: 13px;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 900px) {
   #contentBlock {
     max-width: 1440px;
     margin: auto;
@@ -287,9 +289,10 @@ footer li i {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 90%;
     padding-left: 30px;
     padding-right: 30px;
+    margin: 0;
   }
 
   .infoSteps {
