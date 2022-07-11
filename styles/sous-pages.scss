@@ -54,10 +54,7 @@ header {
 .principal {
     @include flexBox (column, center, center);
     background-color: $lightGrey;
-    section {
-        width: 100%;
-    }
-
+   
     &Menu {
         @include flexBox (column, center, star);
         @include cardMenu;   
@@ -65,9 +62,15 @@ header {
 
     h2 {
         @include fontStyle (18px, normal);
-        padding: 12px;
-        margin-left: 8px;
+        margin: 12px;
+        border-bottom: 2px solid $tertiary;
+        text-transform: uppercase;
     }
+}
+
+.principalSections {
+    width: 100%;
+
 }
 
 .principalArticle {
@@ -109,7 +112,7 @@ footer {
     @include footer;
 }
 
-@media only screen and (max-width:1440px) {
+@media only screen and (min-width:900px) {
     #contentBlock {
         @include global (1440px);
     }
@@ -121,10 +124,17 @@ footer {
 
     .principalSections {
         display: flex;
-        width: 100%;
+        justify-content: space-between;
+        width: 97%;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        section {
+            width: 32%;
+        }
     }
 
     .principalArticle {
-        margin: 15px;
+        width: 100%;
     }
 }

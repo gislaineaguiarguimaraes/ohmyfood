@@ -21,7 +21,7 @@
     font-size: 14px;
     width: 200px;
     padding: 20px;
-    margin-top: 15px;
+    margin: 45px;
     background: linear-gradient( $secondary, $primary);
     border-radius: 50px;
     box-shadow: $shadow;
@@ -92,8 +92,7 @@
     color: $green;
     font-weight: bolder;
     text-align: center;
-    border-radius: 4px;
-    
+    border-radius: 4px;   
 }
 
 @mixin cardMenu {

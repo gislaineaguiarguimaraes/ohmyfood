@@ -101,7 +101,7 @@ header .logo {
   max-width: 100%;
   background-color: #f0f0f0;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 .introduction h1 {
   font-size: 28px;
@@ -115,7 +115,7 @@ header .logo {
   font-size: 14px;
   width: 200px;
   padding: 20px;
-  margin-top: 15px;
+  margin: 45px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
@@ -133,6 +133,7 @@ header .logo {
 .info {
   background-color: white;
   width: 100%;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .info h2 {
@@ -160,11 +161,14 @@ header .logo {
   border-radius: 25px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
 }
+.infoSteps:hover {
+  background-color: rgba(146, 86, 220, 0.1647058824);
+}
+.infoSteps:hover .infoSteps-icon {
+  color: #9356DC;
+}
 .infoSteps h3 {
   padding-left: 30px;
-}
-.infoSteps--purple {
-  background-color: rgba(146, 86, 220, 0.1647058824);
 }
 
 .infoSteps-num {
@@ -186,9 +190,6 @@ header .logo {
   color: grey;
   padding: 10px;
   margin-left: 10px;
-}
-.infoSteps-icon--purple {
-  color: #9356DC;
 }
 
 .infoSteps-text {
@@ -289,9 +290,7 @@ footer li i {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
     margin: 0;
   }
 

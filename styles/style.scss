@@ -51,7 +51,7 @@ header {
     max-width: 100%;
     background-color: $lightGrey;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     h1 {
         @include fontStyle (28px, bolder);
         padding: 10px;
@@ -67,6 +67,7 @@ header {
 .info {
     background-color: $light;
     width: 100%;
+    padding-top: 30px;
     padding-bottom: 30px;
 
     h2 {
@@ -93,12 +94,17 @@ header {
         border-radius: 25px;
         box-shadow: $shadow;
 
-        h3 {
-            padding-left: 30px;
+        &:hover {
+            background-color: $purple;
+
+            .infoSteps-icon {
+                color:$primary;
+            }
+
         }
 
-        &--purple {
-            background-color: $btnPurple ;
+        h3 {
+            padding-left: 30px;
         }
     }
 }
@@ -122,11 +128,8 @@ header {
     color: $greyIcon;
     padding: 10px;
     margin-left: 10px;
-
-    &--purple {
-        color: $primary;
-    }
 }
+
 
 .infoSteps-text {
     text-align: center;
@@ -189,9 +192,8 @@ footer {
 
     .infoArticles {
         @include flexBox (row, center, center);
-        width: 90%;
-        padding-left: 30px;
-        padding-right: 30px;
+        width: 100%;
+       
         margin: 0;
     }
 
