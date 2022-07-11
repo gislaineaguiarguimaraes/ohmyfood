@@ -64,9 +64,14 @@ header {
     }
 
     h2 {
+        @include fontStyle (18px, normal);
         padding: 12px;
-        @include fontStyle (18px, normal)
+        margin-left: 8px;
     }
+}
+
+.principalArticle {
+    @include flexBox (column, space-between, center);
 }
 
 .principalInfo {
