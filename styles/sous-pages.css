@@ -238,4 +238,8 @@ footer li i {
     display: flex;
     width: 100%;
   }
+
+  .principalArticle {
+    margin: 15px;
+  }
 }/*# sourceMappingURL=sous-pages.css.map */
