@@ -23,7 +23,7 @@ body {
 }
 
 #contentBlock {
-    @include global;
+    @include global(768px);
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 }
 
 .backgroundImg {
-    @include backgroundImg;
+    @include backgroundImg (250px);
     
 }
 
@@ -107,4 +107,20 @@ header {
 
 footer {
     @include footer;
+}
+
+@media only screen and (max-width:1440px) {
+    #contentBlock {
+        @include global (1440px);
+    }
+
+    .backgroundImg {
+        @include backgroundImg (450px);
+        
+    }
+
+    .principalSections {
+        display: flex;
+        width: 100%;
+    }
 }

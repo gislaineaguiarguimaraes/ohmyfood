@@ -274,4 +274,38 @@ footer li {
 footer li i {
   width: 15px;
   padding-right: 13px;
+}
+
+@media only screen and (max-width: 1440px) {
+  #contentBlock {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .infoArticles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .infoSteps {
+    width: 30%;
+    width: 350px;
+  }
+
+  .div-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card-resto {
+    max-width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */

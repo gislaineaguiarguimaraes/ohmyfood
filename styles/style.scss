@@ -18,7 +18,7 @@ body {
 }
 
 #contentBlock {
-    @include global
+    @include global (768px);
 }
 
 header {
@@ -176,4 +176,33 @@ header {
 footer {
     @include footer;
     
+}
+
+@media only screen and (max-width:1440px) {
+    #contentBlock {
+        @include global (1440px);
+    }
+
+    .infoArticles {
+        @include flexBox (row, center, center);
+        width: 95%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .infoSteps {
+        width: 30%;
+        width: 350px;
+    }
+
+    .div-articles {
+        @include flexBox (row, center, center);
+        flex-wrap: wrap;
+        
+    }
+
+    .card-resto {
+        max-width: 45%;
+        
+    }
 }
