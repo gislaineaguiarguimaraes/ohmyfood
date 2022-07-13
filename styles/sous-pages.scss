@@ -15,9 +15,6 @@ body {
     p {
         @include fontStyle (15px, normal);  
         
-        &.price {
-            font-weight: bold;
-        }
 
     } 
 }
@@ -47,37 +44,14 @@ header {
 }
 
 .backgroundImg {
-    @include backgroundImg (250px);
-    
+    @include backgroundImg (350px);   
 }
 
 .principal {
     @include flexBox (column, center, center);
-    background-color: $lightGrey;
-   
-    &Menu {
-        @include flexBox (column, center, star);
-        @include cardMenu;   
-    }
-
-    h2 {
-        @include fontStyle (18px, normal);
-        margin: 12px;
-        border-bottom: 2px solid $tertiary;
-        text-transform: uppercase;
-    }
 }
 
-.principalSections {
-    width: 100%;
-
-}
-
-.principalArticle {
-    @include flexBox (column, space-between, center);
-}
-
-.principalInfo {
+.principalInfoRestaurant {
     @include flexBox (row, space-between, center);
     width: 100%;
     background-color:$lightGrey;
@@ -95,6 +69,64 @@ header {
     i {
         font-size: 22px;
         padding-right: 15px;
+    }
+}
+
+.menuContainer {
+    background-color: $lightGrey;
+    width: 100%;
+}
+
+.subMenuTitle {
+    @include fontStyle (18px, normal);
+    margin: 20px;
+    border-bottom: 2px solid $tertiary;
+    text-transform: uppercase;
+}
+
+.subMenuType {
+    @include flexBox (column, space-between, center);
+}
+   
+.subMenuItem {
+    @include flexBox (row, space-between, center);
+    @include cardMenu;  
+    
+    &-info {
+        padding-left: 15px;
+    }
+        
+    
+    &-price {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        p {
+            font-size: 16px;
+            font-weight: bolder;
+            padding-bottom: 5px;
+
+        }
+        
+    }
+
+    &-check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $tertiary;
+        border-radius: 0 10px 10px 0;
+        height: 100%;
+        width: 60px;
+        i {
+            background-color: white;
+            border-radius:50%;
+            color: $tertiary;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 8px;
+        }
+        
     }
 }
 
@@ -122,7 +154,7 @@ footer {
         
     }
 
-    .principalSections {
+    .menuContainer {
         display: flex;
         justify-content: space-between;
         width: 97%;
@@ -134,7 +166,7 @@ footer {
         }
     }
 
-    .principalArticle {
+    .subMenu {
         width: 100%;
     }
 }

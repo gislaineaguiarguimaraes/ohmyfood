@@ -98,16 +98,14 @@
 @mixin cardMenu {
     width: 94%;
     height: 60px;
-    padding: 8px;
     margin-bottom: 15px;
     background-color: $light;
     border-radius: 15px;
     box-shadow: $shadow;
     line-height: 1.4;
 
-    .principalMenu-info {
-        display: flex;
-        justify-content: space-between;
+    .subMenuItem-info {
+        @include flexBox (column, center, start)
     }
 }
 

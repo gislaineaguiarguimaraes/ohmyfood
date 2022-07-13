@@ -61,9 +61,6 @@ body p {
   font-size: 15px;
   font-weight: normal;
 }
-body p.price {
-  font-weight: bold;
-}
 
 #contentBlock {
   max-width: 768px;
@@ -100,7 +97,7 @@ header .logo {
 
 .backgroundImg {
   width: 100%;
-  height: 250px;
+  height: 350px;
 }
 .backgroundImg img {
   -o-object-fit: cover;
@@ -114,46 +111,9 @@ header .logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
-}
-.principalMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: star;
-  width: 94%;
-  height: 60px;
-  padding: 8px;
-  margin-bottom: 15px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
-  line-height: 1.4;
-}
-.principalMenu .principalMenu-info {
-  display: flex;
-  justify-content: space-between;
-}
-.principal h2 {
-  font-size: 18px;
-  font-weight: normal;
-  margin: 12px;
-  border-bottom: 2px solid #99E2D0;
-  text-transform: uppercase;
 }
 
-.principalSections {
-  width: 100%;
-}
-
-.principalArticle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.principalInfo {
+.principalInfoRestaurant {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -165,15 +125,85 @@ header .logo {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.principalInfo h1 {
+.principalInfoRestaurant h1 {
   font-family: "Shrikhand", cursive;
   font-size: 24px;
   font-weight: normal;
   padding: 20px;
 }
-.principalInfo i {
+.principalInfoRestaurant i {
   font-size: 22px;
   padding-right: 15px;
+}
+
+.menuContainer {
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+.subMenuTitle {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px;
+  border-bottom: 2px solid #99E2D0;
+  text-transform: uppercase;
+}
+
+.subMenuType {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subMenuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  height: 60px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
+  line-height: 1.4;
+}
+.subMenuItem .subMenuItem-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.subMenuItem-info {
+  padding-left: 15px;
+}
+.subMenuItem-price {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.subMenuItem-price p {
+  font-size: 16px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+.subMenuItem-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  width: 60px;
+}
+.subMenuItem-check i {
+  background-color: white;
+  border-radius: 50%;
+  color: #99E2D0;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 8px;
 }
 
 .divBtn {
@@ -224,7 +254,6 @@ footer li i {
     max-width: 1440px;
     margin: auto;
   }
-
   .backgroundImg {
     width: 100%;
     height: 450px;
@@ -235,19 +264,17 @@ footer li i {
     width: 100%;
     height: 100%;
   }
-
-  .principalSections {
+  .menuContainer {
     display: flex;
     justify-content: space-between;
     width: 97%;
     padding-right: 15px;
     padding-left: 15px;
   }
-  .principalSections section {
+  .menuContainer section {
     width: 32%;
   }
-
-  .principalArticle {
+  .subMenu {
     width: 100%;
   }
 }/*# sourceMappingURL=sous-pages.css.map */

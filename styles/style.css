@@ -284,7 +284,6 @@ footer li i {
     max-width: 1440px;
     margin: auto;
   }
-
   .infoArticles {
     display: flex;
     flex-direction: row;
@@ -293,12 +292,10 @@ footer li i {
     width: 100%;
     margin: 0;
   }
-
   .infoSteps {
     width: 30%;
     width: 350px;
   }
-
   .div-articles {
     display: flex;
     flex-direction: row;
@@ -306,7 +303,6 @@ footer li i {
     align-items: center;
     flex-wrap: wrap;
   }
-
   .card-resto {
     max-width: 45%;
   }
