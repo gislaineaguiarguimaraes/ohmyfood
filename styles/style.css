@@ -254,11 +254,29 @@ header .logo {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 15px;
   line-height: 1.4;
 }
-.card-resto-info i {
+
+.fa-heart {
   font-size: 24px;
+}
+
+.fa-heart--purple {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  font-size: 24px;
+  font-weight: 900;
+  padding-right: 15px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.fa-heart--purple:hover {
+  opacity: 1;
 }
 
 /*Partie Footer*/

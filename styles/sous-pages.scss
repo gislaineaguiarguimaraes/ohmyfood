@@ -53,6 +53,7 @@ header {
 
 .principalInfoRestaurant {
     @include flexBox (row, space-between, center);
+    position: relative;
     width: 100%;
     background-color:$lightGrey;
     border-radius: 40px 40px 0 0;
@@ -67,8 +68,26 @@ header {
     }
 
     i {
-        font-size: 22px;
+        font-size: 24px;
         padding-right: 15px;
+    }
+}
+
+.fa-heart--purple {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    font-size: 24px;
+    font-weight: 900;
+    padding-right: 15px;
+    font-size: 72px;
+    background: -webkit-linear-gradient($primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
     }
 }
 
@@ -78,11 +97,23 @@ header {
 }
 
 .subMenuTitle {
+    position: relative;
     @include fontStyle (18px, normal);
-    margin: 20px;
-    border-bottom: 2px solid $tertiary;
     text-transform: uppercase;
+    margin: 20px;
+    padding-bottom: 15px;
+
+    &:after {
+    content: " ";    
+    width: 50px;
+    height: 3px;
+    background-color: #99e2d0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
 }
+
 
 .subMenuType {
     @include flexBox (column, space-between, center);
@@ -93,29 +124,30 @@ header {
     @include cardMenu;  
     overflow: hidden;
     cursor: pointer;
+    margin: 16px 0;
 
     &-info {
         padding: 10px;
-        flex: 0.5;
+    }
+        
+    &-info, h3, p{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-
-        h3, p {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-        
+          
     }
         
     &-price {
-        height: 100%;
         display: flex;
+        justify-content: flex-end;
         align-items: flex-end;
-        font-size: 16px;
-        font-weight: bolder;
-        padding-bottom: 5px; 
+        height: 100%;
+        flex: 1;
+
+        p {
+            font-size: 16px;
+            font-weight: bolder;
+        }    
     }
 
     &-check {
@@ -125,28 +157,30 @@ header {
         background-color: $tertiary;
         border-radius: 0 10px 10px 0;
         height: 100%;
-        width: 60px;
-        transition-duration: 1s;
-        margin: -60px;
+        padding: 15px;
+        width: 50px;
+        transform: translateX(80px);
 
         .fa-check {
             background-color: white;
             border-radius:50%;
             color: $tertiary;
             font-size: 22px;
-            font-weight: bold;
+            font-weight: bolder;
             padding: 8px;
+            transition: all 1s;
             transform: rotate(180deg);
-            transition-duration: 0.5s ;
         }
     }
 
     &:hover  &-check {
+        transform: translateX(0px);
         margin-right: -1.6px;
+        transition: all 2s ease-in-out;
     }
 
     &:hover .fa-check {
-        transform:rotate(0);
+        transform: rotate(0);
         transition-delay: 0.2s;
       
     }
@@ -191,5 +225,9 @@ footer {
 
     .subMenu {
         width: 100%;
+    }
+
+    .btn {
+        margin: 50px;
     }
 }

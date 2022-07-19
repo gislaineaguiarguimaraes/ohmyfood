@@ -118,6 +118,7 @@ header .logo {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   width: 100%;
   background-color: #f0f0f0;
   border-radius: 40px 40px 0 0;
@@ -132,8 +133,25 @@ header .logo {
   padding: 20px;
 }
 .principalInfoRestaurant i {
-  font-size: 22px;
+  font-size: 24px;
   padding-right: 15px;
+}
+
+.fa-heart--purple {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  font-size: 24px;
+  font-weight: 900;
+  padding-right: 15px;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.fa-heart--purple:hover {
+  opacity: 1;
 }
 
 .menuContainer {
@@ -142,11 +160,21 @@ header .logo {
 }
 
 .subMenuTitle {
+  position: relative;
   font-size: 18px;
   font-weight: normal;
-  margin: 20px;
-  border-bottom: 2px solid #99E2D0;
   text-transform: uppercase;
+  margin: 20px;
+  padding-bottom: 15px;
+}
+.subMenuTitle:after {
+  content: " ";
+  width: 50px;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .subMenuType {
@@ -163,39 +191,32 @@ header .logo {
   align-items: center;
   width: 94%;
   height: 60px;
-  margin: 10px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
   line-height: 1.4;
   overflow: hidden;
   cursor: pointer;
-}
-.subMenuItem .subMenuItem-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  margin: 16px 0;
 }
 .subMenuItem-info {
   padding: 10px;
-  flex: 0.5;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
-.subMenuItem-info h3, .subMenuItem-info p {
+.subMenuItem-info, .subMenuItem h3, .subMenuItem p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .subMenuItem-price {
-  height: 100%;
   display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
+  height: 100%;
+  flex: 1;
+}
+.subMenuItem-price p {
   font-size: 16px;
   font-weight: bolder;
-  padding-bottom: 5px;
 }
 .subMenuItem-check {
   display: flex;
@@ -204,22 +225,24 @@ header .logo {
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
   height: 100%;
-  width: 60px;
-  transition-duration: 1s;
-  margin: -60px;
+  padding: 15px;
+  width: 50px;
+  transform: translateX(80px);
 }
 .subMenuItem-check .fa-check {
   background-color: white;
   border-radius: 50%;
   color: #99E2D0;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: bolder;
   padding: 8px;
+  transition: all 1s;
   transform: rotate(180deg);
-  transition-duration: 0.5s;
 }
 .subMenuItem:hover .subMenuItem-check {
+  transform: translateX(0px);
   margin-right: -1.6px;
+  transition: all 2s ease-in-out;
 }
 .subMenuItem:hover .fa-check {
   transform: rotate(0);
@@ -296,5 +319,8 @@ footer li i {
   }
   .subMenu {
     width: 100%;
+  }
+  .btn {
+    margin: 50px;
   }
 }/*# sourceMappingURL=sous-pages.css.map */

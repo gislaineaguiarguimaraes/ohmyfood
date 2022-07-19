@@ -98,15 +98,11 @@
 @mixin cardMenu {
     width: 94%;
     height: 60px;
-    margin: 10px;
     background-color: $light;
     border-radius: 15px;
     box-shadow: $shadow;
     line-height: 1.4;
 
-    .subMenuItem-info {
-        @include flexBox (column, center, start)
-    }
 }
 
 @mixin footer {
