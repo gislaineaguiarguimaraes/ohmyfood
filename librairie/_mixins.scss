@@ -106,7 +106,6 @@
 }
 
 @mixin footer {
-    color: $light;
     background-color: $darkGrey;
     padding: 25px;
     
@@ -115,12 +114,17 @@
         width: 130px;
     }
     
-    li {
-        padding: 5px;
+    a {
+        text-decoration: none;
 
-        i {
-            width: 15px;
-            padding-right: 13px;
+        li {
+            color: $light;
+            padding: 5px;
+            
+            i {
+                width: 15px;
+                padding-right: 13px;
+            }
         }
     }
 }

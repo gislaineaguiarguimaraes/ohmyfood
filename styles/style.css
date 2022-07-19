@@ -281,7 +281,6 @@ header .logo {
 
 /*Partie Footer*/
 footer {
-  color: white;
   background-color: #2e2e2e;
   padding: 25px;
 }
@@ -289,10 +288,14 @@ footer img {
   padding-bottom: 10px;
   width: 130px;
 }
-footer li {
+footer a {
+  text-decoration: none;
+}
+footer a li {
+  color: white;
   padding: 5px;
 }
-footer li i {
+footer a li i {
   width: 15px;
   padding-right: 13px;
 }
