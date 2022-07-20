@@ -49,6 +49,33 @@ table {
   border-spacing: 0;
 }
 
+@-webkit-keyframes slideDown {
+  0% {
+    transform: scaley(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: scaley(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
 body {
   background-color: #E6E6E6;
   font-family: "Roboto", sans-serif;
@@ -159,6 +186,21 @@ header .logo {
   width: 100%;
 }
 
+.menuContainer1 {
+  -webkit-animation: slideDown 1s;
+          animation: slideDown 1s;
+}
+
+.menuContainer2 {
+  -webkit-animation: slideDown 2s;
+          animation: slideDown 2s;
+}
+
+.menuContainer3 {
+  -webkit-animation: slideDown 3s;
+          animation: slideDown 3s;
+}
+
 .subMenuTitle {
   position: relative;
   font-size: 18px;
@@ -198,9 +240,11 @@ header .logo {
   overflow: hidden;
   cursor: pointer;
   margin: 16px 0;
+  padding: 10px;
 }
 .subMenuItem-info {
   padding: 10px;
+  flex: 1;
 }
 .subMenuItem-info, .subMenuItem h3, .subMenuItem p {
   white-space: nowrap;
@@ -212,7 +256,6 @@ header .logo {
   justify-content: flex-end;
   align-items: flex-end;
   height: 100%;
-  flex: 1;
 }
 .subMenuItem-price p {
   font-size: 16px;
@@ -226,8 +269,9 @@ header .logo {
   border-radius: 0 10px 10px 0;
   height: 100%;
   padding: 15px;
-  width: 50px;
+  width: 40px;
   transform: translateX(80px);
+  transition: transform 2s;
 }
 .subMenuItem-check .fa-check {
   background-color: white;
@@ -240,13 +284,11 @@ header .logo {
   transform: rotate(180deg);
 }
 .subMenuItem:hover .subMenuItem-check {
-  transform: translateX(0px);
-  margin-right: -1.6px;
-  transition: all 2s ease-in-out;
+  transform: translateX(10px);
 }
 .subMenuItem:hover .fa-check {
   transform: rotate(0);
-  transition-delay: 0.2s;
+  transition-delay: 0.4s;
 }
 
 .divBtn {

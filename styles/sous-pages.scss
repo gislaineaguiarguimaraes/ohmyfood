@@ -4,6 +4,8 @@
 
 @import "../librairie/reset";
 
+@import "../librairie/keyframes.scss";
+
 body {
     background-color: $greyBody;
     font-family: $main-font; 
@@ -14,8 +16,6 @@ body {
 
     p {
         @include fontStyle (15px, normal);  
-        
-
     } 
 }
 
@@ -85,7 +85,7 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
-
+    
     &:hover {
         opacity: 1;
     }
@@ -94,6 +94,21 @@ header {
 .menuContainer {
     background-color: $lightGrey;
     width: 100%;
+    
+}
+
+.menuContainer1 {
+    animation: slideDown 1s;
+}
+
+.menuContainer2 {
+    animation: slideDown 2s;
+    
+}
+
+.menuContainer3 {
+    animation: slideDown 3s;
+    
 }
 
 .subMenuTitle {
@@ -124,9 +139,11 @@ header {
     overflow: hidden;
     cursor: pointer;
     margin: 16px 0;
-
+    padding: 10px;
+    
     &-info {
         padding: 10px;
+        flex: 1;
     }
         
     &-info, h3, p{
@@ -141,7 +158,6 @@ header {
         justify-content: flex-end;
         align-items: flex-end;
         height: 100%;
-        flex: 1;
 
         p {
             font-size: 16px;
@@ -157,8 +173,10 @@ header {
         border-radius: 0 10px 10px 0;
         height: 100%;
         padding: 15px;
-        width: 50px;
+        width: 40px;
         transform: translateX(80px);
+        transition: transform 2s;
+        
 
         .fa-check {
             background-color: white;
@@ -173,14 +191,12 @@ header {
     }
 
     &:hover  &-check {
-        transform: translateX(0px);
-        margin-right: -1.6px;
-        transition: all 2s ease-in-out;
+        transform: translateX(10px);    
     }
 
     &:hover .fa-check {
         transform: rotate(0);
-        transition-delay: 0.2s;
+        transition-delay: 0.4s;
       
     }
 
