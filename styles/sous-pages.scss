@@ -144,12 +144,9 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        flex: 1;
-
-        
-           
+        flex: 1;      
     }
-        
+  
     &-price {
         display: flex;
         justify-content: flex-end;
