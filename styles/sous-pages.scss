@@ -26,6 +26,9 @@ body {
 header {
     width: 100%;
     background-color: $light;
+    position: fixed;
+    z-index: 1;
+    top: 0;
 
     .divHeader {
         @include flexBox (row, center, center);
@@ -39,7 +42,7 @@ header {
 
     .logo {
             width: 150px;  
-            padding: 15px;      
+            padding: 5px;      
     }   
 }
 
@@ -221,7 +224,7 @@ footer {
     .menuContainer {
         display: flex;
         justify-content: space-between;
-        width: 97%;
+        width: 100%;
         padding-right: 15px;
         padding-left: 15px;
 
