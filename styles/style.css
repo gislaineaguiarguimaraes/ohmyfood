@@ -50,6 +50,73 @@ table {
   border-spacing: 0;
 }
 
+@-webkit-keyframes slideDown {
+  0% {
+    transform: scaley(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: scaley(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes load {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes load {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 body {
   background-color: #E6E6E6;
   font-family: "Roboto", sans-serif;
@@ -61,6 +128,60 @@ body h3 {
 body p {
   font-size: 16px;
   font-weight: normal;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.854);
+  -webkit-animation: loader 0.1s;
+          animation: loader 0.1s;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  z-index: 10000;
+}
+
+.load {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-item {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  -webkit-animation: load 1s;
+          animation: load 1s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+.load-item1 {
+  background-color: #9356DC;
+}
+
+.load-item2 {
+  background-color: #FF79DA;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.load-item3 {
+  background-color: #99E2D0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #contentBlock {
@@ -83,7 +204,7 @@ header .logo {
 
 .localization {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   padding: 20px;
   background-color: #E6E6E6;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.26);
@@ -104,7 +225,7 @@ header .logo {
   padding: 20px;
 }
 .introduction h1 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bolder;
   padding: 10px;
 }
@@ -114,7 +235,8 @@ header .logo {
   font-weight: bold;
   font-size: 14px;
   width: 200px;
-  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin: 45px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
@@ -140,6 +262,7 @@ header .logo {
   font-size: 20px;
   font-weight: bolder;
   padding-top: 25px;
+  padding-bottom: 20px;
   margin-left: 35px;
 }
 .infoArticles {
@@ -168,7 +291,7 @@ header .logo {
   color: #9356DC;
 }
 .infoSteps h3 {
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 .infoSteps-num {
@@ -204,10 +327,10 @@ header .logo {
   background-color: #f0f0f0;
 }
 #div-restaurant h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bolder;
   padding-top: 40px;
-  padding-left: 20px;
+  padding-left: 15px;
   padding-bottom: 20px;
 }
 
@@ -241,9 +364,10 @@ header .logo {
   top: 0;
   right: 0;
   width: 80px;
-  padding: 9px;
+  padding: 8px;
   background-color: #99E2D0;
-  color: #08704f;
+  color: #049c76;
+  font-size: 14px;
   font-weight: bolder;
   text-align: center;
   border-radius: 4px;
@@ -285,8 +409,9 @@ footer {
   padding: 25px;
 }
 footer img {
+  padding-top: 10px;
   padding-bottom: 10px;
-  width: 130px;
+  width: 110px;
 }
 footer a {
   text-decoration: none;

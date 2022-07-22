@@ -1,20 +1,63 @@
 @import "../librairie/variables";
 @import "../librairie/mixins";
 @import "../librairie/reset";
+@import "../librairie/keyframes";
 
 body {
     background-color: $greyBody;
-    font-family: $main-font;
-
-     
+    font-family: $main-font;    
     h3 {
         @include fontStyle (16px, bolder);
     }
-
     p {
         @include fontStyle (16px, normal);  
     } 
+}
 
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.854);
+    animation: loader 0.1s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;   
+}
+.load {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.load-item {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    border-radius:50% ;
+    animation: load 1s;
+    animation-iteration-count: 3;
+    
+}
+.load-item1 {
+    background-color: $primary;  
+}
+
+.load-item2 {
+    background-color: $secondary;
+    animation-delay: $animationDelay ;   
+}
+
+.load-item3 {
+    background-color: $tertiary;
+    animation-delay: $animationDelay + 0.25;    
 }
 
 #contentBlock {
@@ -34,7 +77,7 @@ header {
 
 .localization {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     padding: 20px;
     background-color: $greyBody;
     box-shadow: $shadowInset;
@@ -53,13 +96,13 @@ header {
     text-align: center;
     padding: 20px;
     h1 {
-        @include fontStyle (28px, bolder);
+        @include fontStyle (26px, bolder);
         padding: 10px;
     }
 }
 
 .btn {
-    @include gradientBtn;
+    @include gradientBtn (200px);
 }
 
 /*Partie information sur l'APP*/
@@ -73,6 +116,7 @@ header {
     h2 {
         @include fontStyle (20px, bolder);
         padding-top: 25px;
+        padding-bottom: 20px;
         margin-left: 35px;
     }
 
@@ -104,7 +148,7 @@ header {
         }
 
         h3 {
-            padding-left: 30px;
+            padding-left: 10px;    
         }
     }
 }
@@ -144,9 +188,9 @@ header {
     padding-bottom: 50px;
     background-color: $lightGrey;
     h2 {
-        @include fontStyle (20px, bolder);
+        @include fontStyle (22px, bolder);
         padding-top: 40px;
-        padding-left: 20px;
+        padding-left: 15px;
         padding-bottom: 20px;
         
        
@@ -177,7 +221,7 @@ header {
 }
 
 .fa-heart {
-    font-size: 24px;  
+    font-size: 24px; 
 }
 .fa-heart--purple {
     position: absolute;
@@ -210,7 +254,6 @@ footer {
     .infoArticles {
         @include flexBox (row, center, center);
         width: 100%;
-       
         margin: 0;
     }
 
@@ -221,12 +264,10 @@ footer {
 
     .div-articles {
         @include flexBox (row, center, center);
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;      
     }
 
     .card-resto {
-        max-width: 45%;
-        
+        max-width: 45%;    
     }
 }

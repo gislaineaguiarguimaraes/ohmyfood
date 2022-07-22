@@ -1,0 +1,40 @@
+@keyframes slideDown {
+    0% {
+        transform: scaley(0);
+        opacity: 0;
+        
+        
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scaley(1);
+        opacity: 1;   
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(0) ;   
+    }
+    25% {
+        transform: translateY(8px) ;
+    }
+    50% {
+        transform: translateY(-8px) ;
+    }
+    100% {
+        transform: translateY(0) ;
+        
+    }
+}
+
+@keyframes loader {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }   
+}

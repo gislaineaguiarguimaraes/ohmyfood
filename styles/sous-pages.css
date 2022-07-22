@@ -76,6 +76,46 @@ table {
     opacity: 1;
   }
 }
+@-webkit-keyframes load {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes load {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 body {
   background-color: #E6E6E6;
   font-family: "Roboto", sans-serif;
@@ -104,7 +144,7 @@ header .divHeader {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 15px;
+  padding: 5px;
 }
 header a {
   position: absolute;
@@ -171,7 +211,6 @@ header .logo {
   font-size: 24px;
   font-weight: 900;
   padding-right: 15px;
-  font-size: 72px;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -229,7 +268,7 @@ header .logo {
 .subMenuItem {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 94%;
   height: 60px;
@@ -240,22 +279,20 @@ header .logo {
   overflow: hidden;
   cursor: pointer;
   margin: 16px 0;
-  padding: 10px;
-}
-.subMenuItem-info {
-  padding: 10px;
-  flex: 1;
+  padding: 5px;
 }
 .subMenuItem-info, .subMenuItem h3, .subMenuItem p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  flex: 1;
 }
 .subMenuItem-price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   height: 100%;
+  margin: 30px;
 }
 .subMenuItem-price p {
   font-size: 16px;
@@ -263,6 +300,7 @@ header .logo {
 }
 .subMenuItem-check {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
@@ -270,43 +308,47 @@ header .logo {
   height: 100%;
   padding: 15px;
   width: 40px;
-  transform: translateX(80px);
-  transition: transform 2s;
+  margin-right: -80px;
+  transition: margin-right 1s ease-in-out;
 }
 .subMenuItem-check .fa-check {
   background-color: white;
   border-radius: 50%;
   color: #99E2D0;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bolder;
-  padding: 8px;
+  padding: 5px;
   transition: all 1s;
   transform: rotate(180deg);
 }
 .subMenuItem:hover .subMenuItem-check {
-  transform: translateX(10px);
+  margin-right: -10px;
 }
 .subMenuItem:hover .fa-check {
   transform: rotate(0);
-  transition-delay: 0.4s;
+  transition-delay: 0.15s;
 }
 
 .divBtn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f0f0f0;
 }
 
 .btn {
   text-align: center;
   font-weight: bold;
   font-size: 14px;
-  width: 200px;
-  padding: 20px;
+  width: 160px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin: 45px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
-  margin: 15px;
 }
 .btn:hover {
   opacity: 0.8;
@@ -322,8 +364,9 @@ footer {
   padding: 25px;
 }
 footer img {
+  padding-top: 10px;
   padding-bottom: 10px;
-  width: 130px;
+  width: 110px;
 }
 footer a {
   text-decoration: none;

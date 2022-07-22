@@ -15,12 +15,13 @@
     font-weight: $weight;  
 } 
    
-@mixin gradientBtn {
+@mixin gradientBtn ($widht){
     text-align: center;
     font-weight: bold;
     font-size: 14px;
-    width: 200px;
-    padding: 20px;
+    width: $widht;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: 45px;
     background: linear-gradient( $secondary, $primary);
     border-radius: 50px;
@@ -87,9 +88,10 @@
 
 @mixin cardNouveau {
     width: 80px;
-    padding: 9px;
+    padding: 8px;
     background-color: $tertiary;
     color: $green;
+    font-size: 14px;
     font-weight: bolder;
     text-align: center;
     border-radius: 4px;   
@@ -110,8 +112,9 @@
     padding: 25px;
     
     img {
+        padding-top: 10px;
         padding-bottom: 10px;
-        width: 130px;
+        width: 110px;
     }
     
     a {
