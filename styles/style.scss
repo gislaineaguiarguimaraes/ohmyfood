@@ -221,24 +221,27 @@ header {
 }
 
 .fa-heart {
-    font-size: 24px; 
-}
-.fa-heart--purple {
-    position: absolute;
-    top: 24px;
-    right: 0;
     font-size: 24px;
-    font-weight: 900;
-    padding-right: 15px;
-    background: -webkit-linear-gradient($primary, $secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-
-    &:hover {
-        opacity: 1;
+    
+    &--purple {
+        position: absolute;
+        top: 24px;
+        right: 0;
+        font-size: 24px;
+        font-weight: 900;
+        padding-right: 15px;
+        background: -webkit-linear-gradient($primary, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+    
+        &:hover {
+            opacity: 1;
+        }
     }
 }
+
  /*Partie Footer*/
 
 footer {

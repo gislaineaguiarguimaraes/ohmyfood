@@ -66,26 +66,28 @@ header {
         @include fontStyle (24px, normal);
         padding: 20px;
     }
-
-    i {
-        font-size: 24px;
-        padding-right: 15px;
-    }
 }
 
-.fa-heart--purple {
+.fa-heart {
+    font-size: 24px;
+    padding-right: 15px;
+
+    &--purple {
     position: absolute;
     top: 35px;
     right: 0;
     font-size: 24px;
     font-weight: 900;
+    
     padding-right: 15px;
     background: -webkit-linear-gradient($primary, $secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 1s ease-in-out;
     opacity: 0;
+    }
     
-    &:hover {
+    &:hover{
         opacity: 1;
     }
 }

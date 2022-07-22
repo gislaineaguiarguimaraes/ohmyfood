@@ -386,7 +386,6 @@ header .logo {
 .fa-heart {
   font-size: 24px;
 }
-
 .fa-heart--purple {
   position: absolute;
   top: 24px;
@@ -397,6 +396,7 @@ header .logo {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
   opacity: 0;
 }
 .fa-heart--purple:hover {
@@ -408,10 +408,9 @@ footer {
   background-color: #2e2e2e;
   padding: 25px;
 }
-footer img {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 110px;
+footer h3 {
+  color: white;
+  font: lighter 20px "Shrikhand", cursive;
 }
 footer a {
   text-decoration: none;

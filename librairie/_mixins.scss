@@ -110,13 +110,12 @@
 @mixin footer {
     background-color: $darkGrey;
     padding: 25px;
-    
-    img {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 110px;
+
+    h3 {
+        color: white;
+        font: lighter 20px $title-font;
     }
-    
+
     a {
         text-decoration: none;
 
