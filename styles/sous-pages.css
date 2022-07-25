@@ -374,14 +374,15 @@ footer h3 {
   color: white;
   font: lighter 20px "Shrikhand", cursive;
 }
-footer a {
-  text-decoration: none;
-}
-footer a li {
+footer li {
   color: white;
   padding: 5px;
 }
-footer a li i {
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+footer li a i {
   width: 15px;
   padding-right: 13px;
 }

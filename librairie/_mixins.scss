@@ -119,12 +119,13 @@
         font: lighter 20px $title-font;
     }
 
-    a {
-        text-decoration: none;
+    li {
+        color: $light;
+        padding: 5px;
 
-        li {
+        a {
+            text-decoration: none;
             color: $light;
-            padding: 5px;
             
             i {
                 width: 15px;
