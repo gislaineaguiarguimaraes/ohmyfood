@@ -220,7 +220,7 @@ header .logo {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
 }
 .fa-heart:hover {
