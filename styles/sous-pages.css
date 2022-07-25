@@ -232,21 +232,6 @@ header .logo {
   width: 100%;
 }
 
-.menuContainer1 {
-  -webkit-animation: slideDown 1s;
-          animation: slideDown 1s;
-}
-
-.menuContainer2 {
-  -webkit-animation: slideDown 2s;
-          animation: slideDown 2s;
-}
-
-.menuContainer3 {
-  -webkit-animation: slideDown 3s;
-          animation: slideDown 3s;
-}
-
 .subMenuTitle {
   position: relative;
   font-size: 18px;
@@ -287,6 +272,13 @@ header .logo {
   cursor: pointer;
   margin: 16px 0;
   padding: 5px;
+  -webkit-animation: slideDown 0.6s;
+          animation: slideDown 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  transform: scale(0);
 }
 .subMenuItem-info, .subMenuItem h3, .subMenuItem p {
   white-space: nowrap;
@@ -325,7 +317,7 @@ header .logo {
   font-size: 20px;
   font-weight: bolder;
   padding: 5px;
-  transition: all 1s;
+  transition: all 1.5s;
   transform: rotate(180deg);
 }
 .subMenuItem:hover .subMenuItem-check {
@@ -334,6 +326,51 @@ header .logo {
 .subMenuItem:hover .fa-check {
   transform: rotate(0);
   transition-delay: 0.15s;
+}
+
+.animDelay-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.animDelay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.animDelay-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.animDelay-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.animDelay-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.animDelay-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.animDelay-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.animDelay-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.animDelay-9 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .divBtn {
@@ -409,8 +446,6 @@ footer li a i {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
   }
   .menuContainer section {
     width: 32%;
