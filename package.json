@@ -1,0 +1,19 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "Projet-3 realisé pour la formation de Dev-Web Openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gislaineaguiarguimaraes/projet-3.git"
+  },
+  "author": "Gislaine de Aguiar Guimaraes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gislaineaguiarguimaraes/projet-3/issues"
+  },
+  "homepage": "https://github.com/gislaineaguiarguimaraes/projet-3#readme"
+}
