@@ -146,8 +146,8 @@ header .divHeader {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding: 5px;
+  width: 100%;
 }
 header a {
   position: absolute;

@@ -32,8 +32,9 @@ header {
 
     .divHeader {
         @include flexBox (row, center, center);
-        position: relative;
+        
         padding: 5px;
+        width: 100%;
     }
     a {
         @include headerBtn;
