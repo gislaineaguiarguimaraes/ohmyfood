@@ -4,7 +4,7 @@
   "description": "Projet-3 realisé pour la formation de Dev-Web Openclassrooms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass watch styles/sous-pages.scss:styles/sous-pages.css"
   },
   "repository": {
     "type": "git",

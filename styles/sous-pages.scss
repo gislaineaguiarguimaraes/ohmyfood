@@ -83,12 +83,11 @@ header {
     font-weight: 900;
     padding-right: 15px;
     background: -webkit-linear-gradient($primary, $secondary);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease-in-out;
     opacity: 0;
-    }
-    
+    }  
     &:hover{
         opacity: 1;
     }
@@ -96,8 +95,7 @@ header {
 
 .menuContainer {
     background-color: $lightGrey;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .subMenuTitle {
@@ -162,7 +160,7 @@ header {
         padding: 15px;
         width: 40px;
         margin-right: -80px;
-        transition: margin-right 1s ease-in-out ;
+        transition: margin-right 0.8s ease-in-out ;
         
         .fa-check {
             background-color: white;
@@ -171,7 +169,7 @@ header {
             font-size: 20px;
             font-weight: bolder;
             padding: 5px;
-            transition: all 1.5s;
+            transition: all 1s;
             transform: rotate(180deg);
         }
     }
