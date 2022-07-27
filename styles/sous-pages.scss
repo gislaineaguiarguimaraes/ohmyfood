@@ -24,13 +24,8 @@ body {
 }
 
 header {
-    width: 100%;
     position: relative;
-    background-color: $light;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-        
+    background-color: $light;    
     a {
         @include headerBtn;
         color: $dark;
@@ -39,12 +34,11 @@ header {
  
 .logo {
     width: 150px;  
-    padding: 5px;      
+    padding: 15px;      
 } 
 
 .divHeader {
     @include flexBox (row, center, center);
-    padding: 5px;
     width: 100%;
 }
 
@@ -209,7 +203,7 @@ footer {
     @include footer;
 }
 
-@media only screen and (min-width:900px) {
+@media only screen and (min-width:769px) {
     #contentBlock {
         @include global (1440px);
     }
