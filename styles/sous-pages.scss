@@ -25,16 +25,17 @@ body {
 
 header {
     width: 100%;
-    background-color: $light;
-    position: fixed;
-    z-index: 1;
-    top: 0;
+    
+    
 
     .divHeader {
         @include flexBox (row, center, center);
-        
+        position: fixed;
+        z-index: 1;
+        top: 0;
         padding: 5px;
         width: 100%;
+        background-color: $light;
     }
     a {
         @include headerBtn;
