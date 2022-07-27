@@ -212,7 +212,9 @@ footer {
     #contentBlock {
         @include global (1440px);
     }
-
+    header {
+        width: 100%
+    }
     .backgroundImg {
         @include backgroundImg (550px);   
     }
