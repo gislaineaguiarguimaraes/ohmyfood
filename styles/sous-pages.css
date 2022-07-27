@@ -136,18 +136,11 @@ body p {
 
 header {
   width: 100%;
-}
-header .divHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  background-color: white;
   position: fixed;
   z-index: 1;
   top: 0;
-  padding: 5px;
-  width: 100%;
-  background-color: white;
 }
 header a {
   position: absolute;
@@ -160,9 +153,19 @@ header a i {
   font-size: 24px;
   padding-left: 15px;
 }
-header .logo {
+
+.logo {
   width: 150px;
   padding: 5px;
+}
+
+.divHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
 }
 
 .div-background {

@@ -25,27 +25,27 @@ body {
 
 header {
     width: 100%;
-    
-    
-
-    .divHeader {
-        @include flexBox (row, center, center);
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        padding: 5px;
-        width: 100%;
-        background-color: $light;
-    }
+    position: relative;
+    background-color: $light;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+        
     a {
         @include headerBtn;
         color: $dark;
-    }
+    }  
+}
+ 
+.logo {
+    width: 150px;  
+    padding: 5px;      
+} 
 
-    .logo {
-            width: 150px;  
-            padding: 5px;      
-    }   
+.divHeader {
+    @include flexBox (row, center, center);
+    padding: 5px;
+    width: 100%;
 }
 
 .div-background {
