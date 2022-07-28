@@ -232,3 +232,15 @@ footer {
         margin: 50px;
     }
 }
+
+@media only screen and (min-width:769px) {
+    body {
+        height: 100vh;
+    }
+    #contentBlock {
+        height: 100vh;
+    }
+    footer {
+        padding: 45px;
+    }
+}

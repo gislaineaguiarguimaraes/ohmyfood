@@ -395,6 +395,7 @@ header .logo {
   padding-right: 15px;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in-out;
   opacity: 0;
@@ -425,7 +426,7 @@ footer li a i {
   padding-right: 13px;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 769px) {
   #contentBlock {
     max-width: 1440px;
     margin: auto;
@@ -451,5 +452,16 @@ footer li a i {
   }
   .card-resto {
     max-width: 45%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  body {
+    height: 100vh;
+  }
+  #contentBlock {
+    height: 100vh;
+  }
+  footer {
+    padding: 45px;
   }
 }/*# sourceMappingURL=style.css.map */
