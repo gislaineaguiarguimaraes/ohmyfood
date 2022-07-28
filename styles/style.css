@@ -281,6 +281,7 @@ header .logo {
   padding: 20px;
   margin: 10px;
   width: 75%;
+  max-width: 400px;
   border-radius: 25px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.201);
 }
@@ -460,6 +461,12 @@ footer li a i {
   }
   #contentBlock {
     height: 100vh;
+  }
+  .infoArticles {
+    flex-wrap: wrap;
+  }
+  .infoSteps-text {
+    white-space: nowrap;
   }
   footer {
     padding: 45px;
