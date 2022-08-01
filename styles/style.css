@@ -319,6 +319,7 @@ header .logo {
 .infoSteps-text {
   text-align: center;
   padding: 10px;
+  white-space: nowrap;
 }
 
 /*Partie restaurants*/
